@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #1a973c, #044f18, #2c5364);
+    height: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.login-container {
+    background: #1e1e1e; /* Dark container background */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #34d399; /* Light green title */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #b0b0b0;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    color: #34d399;
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 35px;
+    border: 1px solid #444;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: border 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #34d399;
+}
+
+.login-btn {
+    background: linear-gradient(to right, #34d399, #2bb673);
+    color: #000000;
+    padding: 12px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: linear-gradient(to right, #2bb673, #1e8c5a);
+    color: #ffffff;
+}
+
+/* Add animation on load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+}

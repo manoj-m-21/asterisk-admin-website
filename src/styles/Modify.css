@@ -1,0 +1,102 @@
+/* Main Container */
+.extension-container {
+    background: linear-gradient(to bottom right, #044f18, #1a973c, #2c5364);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form Box */
+.form-box {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    width: 400px;
+}
+
+/* Title */
+.form-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #044f18;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Styles */
+.extension-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Input Fields */
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #747373;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: #f9f9f9;
+    color: #044f18;
+}
+
+/* Input Focus */
+.form-group input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.6);
+}
+
+/* Save Button */
+.save-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #044f18;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Save Button Hover */
+.save-btn:hover {
+    background-color: #1a973c;
+    transform: scale(1.05);
+}
+
+/* Disable Button */
+.save-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .form-box {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+    }
+
+    .form-group input {
+        font-size: 0.85rem;
+    }
+
+    .save-btn {
+        font-size: 0.9rem;
+    }
+}

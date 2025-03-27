@@ -1,0 +1,73 @@
+body {
+  background-color: white;
+  text-align: center;
+}
+
+.add-extension {
+  display: flex;
+  width: 150px;
+  padding: 10px;
+  justify-content: center;
+  margin-left: 10%;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid #044f18;
+  background: linear-gradient(to bottom right, #9d21f0, #cb1ce9, #000000);
+  color: #ffff;
+  font-weight:bold;
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
+
+.table-container {
+  margin-top: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.data-table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-collapse: collapse;
+  background-color: #044f18;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #20c64c;
+  padding: 12px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #002e0c;
+  font-weight: bold;
+}
+
+.data-table tr:hover {
+  background-color: #1a973c;
+  color: #000000;
+}
+
+.action-btn {
+  background-color: #00ff44;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 5px; /* Added margin for spacing */
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+}
+
+.action-btn:hover {
+  background-color: #333333;
+  border: 1px solid whitesmoke;
+}

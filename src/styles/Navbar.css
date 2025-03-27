@@ -1,0 +1,230 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Ensures navbar stays on top */
+    z-index: 1001; /* Higher than sidebar */
+    width: 100%;
+    padding: 10px 20px;
+    background: linear-gradient(to top, #044f18, #1a973c, #2c5364); /* Dark green gradient */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: #f8f9fa;
+}
+
+/* Left Side of Navbar */
+.leftside {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.leftside h1 {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Right Side of Navbar */
+.rightside {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Menu Button */
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    color: rgb(0, 255, 162); /* Light green on hover */
+}
+
+/* Search Bar */
+.search-bar {
+    padding: 8px 12px;
+    border: 1px solid #343a40;
+    border-radius: 5px;
+    outline: none;
+    width: 250px;
+    background-color: #6f90be;
+    color: #f8f9fa;
+}
+
+.search-bar::placeholder {
+    color: #002702;
+}
+
+.search-bar:focus {
+    border-color: #34d399;
+    box-shadow: 0 0 5px rgba(52, 211, 153, 0.8);
+}
+
+/* Icon Button */
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #f8f9fa;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+.icon-btn:hover {
+    color: #34d399; /* Light green hover */
+}
+
+/* Logout Button */
+.logout-btn {
+    background: #f71313;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background: #0dff00;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive Navbar for Small Screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rightside {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .logout-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+/* Show overlay when menu is open */
+.menu-overlay.active {
+    display: block;
+}
+
+/* Side Menu */
+.side-menu {
+    text-align: left;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000; /* Lower than navbar */
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: width 0.5s ease;
+    margin-top: 57px;
+}
+
+/* Side Menu Links */
+.side-menu a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #f1f1f1;
+}
+
+/* Close Button for Sidebar */
+.side-menu .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Open Sidebar */
+.side-menu.open {
+    width: 250px;
+    z-index: 999; /* Keeps sidebar below navbar */
+}
+
+/* Side Menu List */
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #1a973c;
+    border-top: 1px solid #1a973c;
+}
+
+.side-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.side-menu li a:hover {
+    background-color: #1a973c;
+}
+
+/* Responsive for Small Screens */
+@media screen and (max-height: 450px) {
+    .side-menu {
+        padding-top: 15px;
+    }
+
+    .side-menu a {
+        font-size: 18px;
+    }
+}
