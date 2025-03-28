@@ -8,8 +8,11 @@ function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleLogout = () => {
-        localStorage.removeItem('userToken');
-        navigate('/'); // Redirect to home (login) page
+        const confirmLogout = window.confirm("Are you sure you want to logout?");
+        if (confirmLogout) {
+            localStorage.removeItem('userToken');
+            navigate('/'); // Redirect to home (login) page
+        }
     };
 
     const handleGoHome = () => {
